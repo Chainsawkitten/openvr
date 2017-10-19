@@ -50,11 +50,6 @@ elseif(APPLE)
   endif()
 endif()
 
-# Set output folder for static and shared libraries
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${PLATFORM_NAME}${PROCESSOR_ARCH})
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${PLATFORM_NAME}${PROCESSOR_ARCH})
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${PLATFORM_NAME}${PROCESSOR_ARCH})
-
 # Enable some properties.
 if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID MATCHES "Clang")
 	# Enable c++11 and hide symbols which shouldn't be visible
